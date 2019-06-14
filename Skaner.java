@@ -2,14 +2,28 @@ import java.util.Scanner;
 
 class Skaner {
 public static void main(String[] args){
+	int liczbaArgumentow = args.length;
+	float pierwszaLiczba;
+	pierwszaLiczba = 0;
+	float drugaLiczba;
+	drugaLiczba = 0;
+	String znak = "+";
 	Scanner scan = new Scanner(System.in);
-			System.out.println("Podaj pierwsza liczbe:");
-        float pierwszaLiczba = scan.nextFloat();
+		if(liczbaArgumentow==0){
+		
+		System.out.println("Podaj pierwsza liczbe:");
+        pierwszaLiczba = scan.nextFloat();
         System.out.println("Podaj druga liczbe:");
-        float drugaLiczba = scan.nextFloat();
+        drugaLiczba = scan.nextFloat();
         System.out.println(pierwszaLiczba + ", " + drugaLiczba + " Co chcesz zrobic z tymi liczbami?");
 		scan.nextLine();
-		String znak = scan.nextLine(); 
+		znak = scan.nextLine(); 
+		}
+		else{
+		pierwszaLiczba = Float.parseFloat(args[0]);
+		znak = args[1];
+		drugaLiczba = Float.parseFloat(args[2]);			
+		}
 	
 		if(znak.compareTo("+")==0){
 			System.out.println(pierwszaLiczba + " + " + drugaLiczba + " = " + (pierwszaLiczba+drugaLiczba));
@@ -36,5 +50,6 @@ public static void main(String[] args){
 			}
 		System.out.println(pierwszaLiczba + " do potegi " + drugaLiczba + " = " + wynik);
 		}
+		
 	}	
 }

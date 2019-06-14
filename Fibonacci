@@ -1,0 +1,4 @@
+class Fibonacci{
+public class static void main(String[] args){
+int n = 50, zmienna1 = 0, zmienna2 = 2;
+String.out.println("Pierwsze " + n + " liczb w ciagu Fibonacciego:");
