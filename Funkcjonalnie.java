@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class Funkcjonalnie {
 	public static void main(String[] args){
-		Scanner scan = new Scanner(System.in);
 		czysc();
+		Scanner scan = new Scanner(System.in);
 		int wybor;
 		wybor = 1;
 		while(wybor!=0){
